@@ -1,0 +1,13 @@
+{
+  "name": "egain-import-address-book",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "eGain",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.903.0",
+    "axios": "^0.21.1",
+    "csvtojson": "^2.0.10",
+    "ps-chronicle": "^0.1.0"
+  }
+}

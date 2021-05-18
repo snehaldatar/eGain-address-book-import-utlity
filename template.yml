@@ -1,0 +1,64 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: 
+- AWS::Serverless-2016-10-31
+
+Parameters:
+  BucketName:
+    Type: String
+    Default: import-address-book
+
+Resources:
+  AddressBookS3:
+    DependsOn: LambdaInvokePermission
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: import-address-book
+      NotificationConfiguration: 
+        LambdaConfigurations:
+          - Function: !GetAtt ImportAddressBookLambda.Arn
+            Event: s3:ObjectCreated:*
+  LambdaInvokePermission: 
+    Type: AWS::Lambda::Permission
+    Properties: 
+      FunctionName: !Ref ImportAddressBookLambda
+      Action: lambda:InvokeFunction
+      Principal: s3.amazonaws.com
+      SourceArn: 
+        Fn::Sub: arn:aws:s3:::${BucketName}
+  ImportAddressBookLambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: import-address-book
+      Handler: src/index.handler
+      Runtime: nodejs14.x
+      Timeout: 900
+      Role: !GetAtt LambdaExecutionRole.Arn
+  LambdaExecutionRole:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+        - Effect: Allow
+          Principal:
+            Service:
+            - lambda.amazonaws.com
+          Action:
+          - sts:AssumeRole
+      Path: "/"
+      Policies:
+      - PolicyName: ImportAddressBookLambdaPolicy
+        PolicyDocument:
+          Version: '2012-10-17'
+          Statement:
+          - Effect: Allow
+            Action: "s3:*"
+            Resource: "*"
+          - Effect: Allow
+            Action: "cloudwatch:*"
+            Resource: "*"
+          - Effect: Allow
+            Action: "logs:*"
+            Resource: "*"
+
+  

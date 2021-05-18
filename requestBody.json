@@ -1,0 +1,263 @@
+{
+    "department": {
+        "name": "Service"
+    },
+    "type": {
+        "value": "individual"
+    },
+    "level": {
+        "value": "Premium"
+    },
+    "role": {
+        "value": "Partner"
+    },
+    "pin": "0121",
+    "howReferred": {
+        "value": "Customer"
+    },
+    "industry": {
+        "value": "Telecom"
+    },
+    "marketSegment": "Medical Products",
+    "entitlements": "Free service",
+    "customAttributes": {
+        "customAttribute": [
+            {
+                "attribName": "preferredlang",
+                "attribValues": {
+                    "attribValue": [
+                        {
+                            "value": "English"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "contactPersons": {
+        "contactPerson": [
+            {
+                "salutation": "Mr.",
+                "firstName": "John",
+                "middleName": "Russel",
+                "lastName": "Tierney",
+                "loginId": "john",
+                "gender": {
+                    "value": "male"
+                },
+                "identification": {
+                    "type": "Passport",
+                    "value": "AE0000005"
+                },
+                "suffix": {
+                    "value": "jr."
+                },
+                "initials": "A.",
+                "secretQuestion": "Place of Birth",
+                "secretAnswer": "Texas",
+                "hasDirectMailingConsent": "true",
+                "hasDirectCallingConsent": "true",
+                "hasHoldingDataConsent": "true",
+                "jobTitle": "Manager",
+                "employmentStatus": {
+                    "value": "intern"
+                },
+                "priority": "High",
+                "dateOfBirth": "1965-12-09T00:00:00.000Z",
+                "maritalStatus": {
+                    "value": "married"
+                },
+                "type": {
+                    "value": "Billing"
+                },
+                "firstNameFurigana": "John",
+                "middleNameFurigana": "Russel",
+                "lastNameFurigana": "Tierney",
+                "startGreeting": "Welcome",
+                "endGreeting": "Thanks, Byee",
+                "spouseName": "Jenifer",
+                "emergencyContact": "0987654321",
+                "occupation": "Branch Manager",
+                "incomeLevel": "60000-70000",
+                "educationLevel": {
+                    "value": "post graduate"
+                },
+                "race": "Asian",
+                "dependents": "4",
+                "isSmoker": "true",
+                "hobbies": "Fishing",
+                "interests": "Reading",
+                "contactOrder": "1984",
+                "customAttributes": {
+                    "customAttribute": [
+                        {
+                            "attribName": "isprimary",
+                            "attribValues": {
+                                "attribValue": [
+                                    {
+                                        "value": "y"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "contactPoints": {
+                    "contactPoint": [
+                        {
+                            "type": {
+                                "value": "phone",
+                                "phone": {
+                                    "type": {
+                                        "value": "home"
+                                    },
+                                    "phoneNo": "234 3456",
+                                    "countryCode": "1",
+                                    "areaCode": "408",
+                                    "extension": "102",
+                                    "availability": {
+                                        "days": {
+                                            "value": "any_day"
+                                        },
+                                        "times": {
+                                            "value": "mornings"
+                                        }
+                                    }
+                                }
+                            },
+                            "priority": {
+                                "value": "high"
+                            },
+                            "customAttributes": {
+                                "customAttribute": [
+                                    {
+                                        "attribName": "prioritysequence",
+                                        "attribValues": {
+                                            "attribValue": [
+                                                {
+                                                    "value": "1"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": {
+                                "value": "postal",
+                                "postal": {
+                                    "type": {
+                                        "value": "office"
+                                    },
+                                    "address_1": "345",
+                                    "address_2": "E Midfield Rd",
+                                    "city": "Mountain View",
+                                    "state": "Ca",
+                                    "zip": "98704",
+                                    "country": "USA",
+                                    "region": "United States"
+                                }
+                            },
+                            "priority": {
+                                "value": "low"
+                            },
+                            "customAttributes": {
+                                "customAttribute": [
+                                    {
+                                        "attribName": "prioritysequence",
+                                        "attribValues": {
+                                            "attribValue": [
+                                                {
+                                                    "value": "2"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": {
+                                "value": "email",
+                                "email": {
+                                    "emailAddress": "john.russel@customer.com"
+                                }
+                            },
+                            "priority": {
+                                "value": "medium"
+                            },
+                            "customAttributes": {
+                                "customAttribute": [
+                                    {
+                                        "attribName": "prioritysequence",
+                                        "attribValues": {
+                                            "attribValue": [
+                                                {
+                                                    "value": "3"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": {
+                                "value": "social",
+                                "social": {
+                                    "socialId": "1234",
+                                    "type": {
+                                        "value": "twitter"
+                                    }
+                                }
+                            },
+                            "priority": {
+                                "value": "low"
+                            },
+                            "customAttributes": {
+                                "customAttribute": [
+                                    {
+                                        "attribName": "prioritysequence",
+                                        "attribValues": {
+                                            "attribValue": [
+                                                {
+                                                    "value": "4"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        {
+                            "type": {
+                                "value": "web",
+                                "website": {
+                                    "url": "www.customer.com"
+                                }
+                            },
+                            "priority": {
+                                "value": "low"
+                            },
+                            "customAttributes": {
+                                "customAttribute": [
+                                    {
+                                        "attribName": "prioritysequence",
+                                        "attribValues": {
+                                            "attribValue": [
+                                                {
+                                                    "value": "5"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}
