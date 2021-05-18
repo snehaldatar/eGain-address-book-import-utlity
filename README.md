@@ -3,20 +3,23 @@
 This example deals with the architecture involved in importing contacts from an external address book (CSV) for a customer into eGain, such that agent would get contact suggestions while looking for a contact in eGain Advisor desktop.
 
 # Architecture Overview
+
 When a CSV file (refer to address-book.csv for the structure) is uploaded to the created s3 bucket, then an object create event is generated which in turn is being sent to the lambda for processing. This lambda will process the contacts in the CSV to JSON and call the eGain login API to authenticate and in turn calls eGain create individual customer API to create the entries in the eGain database.
 
-# Pre-requisites
+Architecture diagram location: "docs\address-book-architecture.png". 
 
-1. Git installed on your system
-2. AWS account
-3. aws-cli installed on your system
-4. sam-cli installed on your system
+# Prerequisites
+
+1. Git installed on your system. It can be downloaded from https://git-scm.com/downloads
+2. AWS account is available
+3. aws-cli installed on your system. please refer https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html to install and configure AWS CLI. You need to run the 'aws configure' to configure the aws profile for deployment
+4. sam-cli installed on your system. please refer https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-windows.html to install and configure SAM CLI
 5. npm installed on your system
 6. eGain system with valid agent credentials
 
 # Installation Steps:
 
-1. Go to your terminal and do git clone of this repository
+1. Go to your terminal and do git clone of this repository by executing command "git clone https://github.com/snehaldatar/eGain-address-book-import-utlity.git" to clone this repository
 2. Move to the root of the cloned repository in your system and do npm install
 3. Fetch the eGain server host name and the agent credentials for your system
 4. Add these details into the config.js inside the src folder and save it (In the prduction app store these credentials in AWS secret manager and call them during run time)
@@ -45,9 +48,9 @@ The below steps helps to verify if the email has been added for the customers in
 
 # Additional Information
 
-1. This sample app is only for creating contacts
-2. Always replace the contacts from address-book.csv with new contacts and upload it to s3
-3. Duplicate contacts will not created
+1. This sample app is only for creating contacts in eGain
+2. Always replaces the contacts from address-book.csv with new contacts and upload it to s3
+3. Duplicate contacts will not be created
 4. This address-book.csv is just an example structure. You can add lot more fields while creating contacts. A complete set of available attributes is available in the requestBody.json file
 5. When you are planning to add more fields to contacts, then add those fields to the address-book.csv and also modify the requestBody present inside the processor.js file and deploy the updated package to AWS
 6. AWS Resources used: S3 - To upload the address-book.csv, Lambda - To process the uploaded csv file
