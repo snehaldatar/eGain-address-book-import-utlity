@@ -16,7 +16,7 @@ When a CSV file (refer to address-book.csv for the structure) is uploaded to the
 
 # Installation Steps:
 
-1. Go to your terminal and do git clone https://github.com/naveenmano/eGain-address-book.git
+1. Go to your terminal and do git clone of this repository
 2. Move to the root of the cloned repository in your system and do npm install
 3. Fetch the eGain server host name and the agent credentials for your system
 4. Add these details into the config.js inside the src folder and save it (In the prduction app store these credentials in AWS secret manager and call them during run time)
@@ -50,9 +50,7 @@ The below steps helps to verify if the email has been added for the customers in
 3. Duplicate contacts will not created
 4. This address-book.csv is just an example structure. You can add lot more fields while creating contacts. A complete set of available attributes is available in the requestBody.json file
 5. When you are planning to add more fields to contacts, then add those fields to the address-book.csv and also modify the requestBody present inside the processor.js file and deploy the updated package to AWS
-6. AWS Resources used:
-   S3 - To upload the address-book.csv
-   Lambda - To process the uploaded csv file
+6. AWS Resources used: S3 - To upload the address-book.csv, Lambda - To process the uploaded csv file
 
 
 
