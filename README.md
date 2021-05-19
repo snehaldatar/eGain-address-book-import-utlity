@@ -17,7 +17,7 @@ Architecture diagram location: "docs\address-book-architecture.png".
 5. npm installed on your system
 6. eGain system with valid agent credentials
 
-# Installation Steps:
+# Installation Steps
 
 1. Go to your terminal and do git clone of this repository by executing command "git clone https://github.com/snehaldatar/eGain-address-book-import-utlity.git" to clone this repository
 2. Move to the root of the cloned repository in your system and do npm install
@@ -54,7 +54,3 @@ The below steps helps to verify if the email has been added for the customers in
 4. This address-book.csv is just an example structure. You can add lot more fields while creating contacts. A complete set of available attributes is available in the requestBody.json file
 5. When you are planning to add more fields to contacts, then add those fields to the address-book.csv and also modify the requestBody present inside the processor.js file and deploy the updated package to AWS
 6. AWS Resources used: S3 - To upload the address-book.csv, Lambda - To process the uploaded csv file
-
-
-
-
