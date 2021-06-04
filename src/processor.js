@@ -4,7 +4,7 @@ const AWS = require('aws-sdk');
 const csv = require('csvtojson');
 const s3 = new AWS.S3();
 const config = require('./config');
-const axiosUtil = require('./axios-client');
+const axiosUtil = require('../layers/axios-client');
 
 async function processCSV(event) {
     let response = {};
