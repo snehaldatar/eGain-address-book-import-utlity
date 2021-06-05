@@ -22,9 +22,9 @@ Architecture diagram location: "docs\address-book-architecture.png".
 1. Go to your terminal and do git clone of this repository by executing command "git clone https://github.com/snehaldatar/eGain-address-book-import-utlity.git" to clone this repository
 2. Move to the root of the cloned repository in your system and do npm install
 3. Fetch the eGain server host name and the agent credentials for your system
-4. Add these details into the config.js inside the src folder and save it (In the prduction app store these credentials in AWS secret manager and call them during run time)
+4. Add these details into the config.js inside the src folder and save it (In the prduction ready application,  store these credentials in AWS secret manager and call them during run time)
 5. Go to your AWS account and select the region where you want to deploy this app
-6. In that region create a S3 bucket. This bucket is for deployment. (If you already have a bucket you can omit this step)
+6. In that region create a S3 bucket. This bucket is for deployment. (If you already have a bucket, you can omit this step)
 7. Go back to the terminal and move to the root of the cloned repository
 8. Run the below command which will generate serverless-output.yml file
 
