@@ -53,4 +53,5 @@ The below steps helps to verify if the email has been added for the customers in
 3. Duplicate contacts will not be created
 4. This address-book.csv is just an example structure. You can add lot more fields while creating contacts. A complete set of available attributes is available in the requestBody.json file
 5. When you are planning to add more fields to contacts, then add those fields to the address-book.csv and also modify the requestBody present inside the processor.js file and deploy the updated package to AWS
-6. AWS Resources used: S3 - To upload the address-book.csv, Lambda - To process the uploaded csv file
+6. AWS Resources used: S3 - To upload the address-book.csv
+                       Lambda - To process the uploaded csv file
