@@ -9,24 +9,24 @@ async function makeRequest(method, url, headers, data, timeout) {
         headers,
         data,
         timeout
-    }).then((res) = {
+    }).then((res) => {
         response = res
-    }).catch((error) = {
+    }).catch((error) => {
         if (error.response) {
             response = {
-                statusCode error.response.status,
-                body JSON.stringify(error.response.data)
+                statusCode: error.response.status,
+                body: JSON.stringify(error.response.data)
             }
         } else if (error.request) {
             response = {
-                statusCode 504,
-                body 'Request timed out'
+                statusCode: 504,
+                body: 'Request timed out'
             }
         } else {
             response = {
-                statusCode 500,
-                body error.message
-            }
+                statusCode: 500,
+                body: error.message
+            } 
         }
     });
     return response;
