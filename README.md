@@ -28,11 +28,11 @@ Architecture diagram location: "docs\address-book-architecture.png".
 7. Go back to the terminal and move to the root of the cloned repository
 8. Run the below command which will generate serverless-output.yml file
 
-sam package --template-file template.yml --output-template-file serverless-output.yml --s3-bucket <Pass the deployment bucket which you created in Step 6> --profile <This is your AWS profile which you have configured. If you have only one profile then pass "default" or the name of the profile>
+sam package --template-file template.yml --output-template-file serverless-output.yml --s3-bucket (Pass the deployment bucket which you created in Step 6) --profile (This is your AWS profile which you have configured. If you have only one profile then pass "default" or the name of the profile)
 
 9. Run the below command to deploy the app to AWS
 
-sam deploy --s3-bucket <Pass the deployment bucket> --template-file serverless-output.yml --stack-name import-address-book --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --profile <Passs the AWS profile> --region <Pass the AWS region>
+sam deploy --s3-bucket (deployment bucket) --template-file serverless-output.yml --stack-name import-address-book --capabilities CAPABILITY_IAM CAPABILITY_AUTO_EXPAND --profile (AWS Profile) --region (AWS Region)
 
 10. Open the address-book.csv from the cloned repository and add the contact details by replacing the example contacts already present in the file and save it
 11. Go to AWS account and navigate to S3 and search for a bucket named "import-address-book"
